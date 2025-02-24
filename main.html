@@ -11,13 +11,13 @@
 </head>
 
 <body class="bg-slate-800 outfit-font">
-    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+    <div class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
         <header class="bg-white">
             <nav class="flex justify-around items-center border-b border-[#08080879] pb-5">
                 <div class="flex justify-between items-center">
                     <img class="w-16" src="assets/logo.svg" alt="logo">
                     <div>
-                        <h1 class="text-xl font-bold">$ 4500</h1>
+                        <h1 class="text-xl font-bold">$ <span id="main-balance">4500</span></h1>
                         <p class="text-[#080808B3]">Available balance</p>
                     </div>
                 </div>
@@ -78,27 +78,27 @@
                             <legend>Select Bank</legend>
                             <select class="select">
                                 <option disabled selected>Select Bank</option>
-                                <option>Bkash</option>
-                                <option>Nagad</option>
-                                <option>Rocket</option>
-                                <option>Cellfin</option>
+                                <option value="Bkash">Bkash</option>
+                                <option value="Nagad">Nagad</option>
+                                <option value="Rocket">Rocket</option>
                             </select>
                             <fieldset class="fieldset">
-                                <label class="fieldset-label">Email</label>
-                                <input type="email" class="input" placeholder="Email" />
-                                <label class="fieldset-label">Password</label>
-                                <input type="password" class="input" placeholder="Password" />
-                                <div><a class="link link-hover">Forgot password?</a></div>
-                                <button id="login-btn"
-                                    class="btn bg-linear-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 mt-4 text-white">Login</button>
-                            </fieldset>
+                                <label class="fieldset-label font-bold">Mobile Number</label>
+                                <input id="account-number" value="01739460198" type="number" class="input" placeholder="Type Your Number" required/>
+                                <label class="fieldset-label font-bold">Amount</label>
+                                <input id="amount" type="text" class="input" placeholder="Type Your Amount" required/>
+                                <label class="fieldset-label font-bold">Pin</label>
+                                <input id="pin" value="1234" type="text" class="input" placeholder="Type Your Pin" required/>
+                                <button id="add-money" class="btn bg-linear-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 mt-4 text-white">Add Money</button>
+                              </fieldset>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </section>
+    </div>
 
+<script src="script/add-money.js"></script>
 </body>
 
 </html>
