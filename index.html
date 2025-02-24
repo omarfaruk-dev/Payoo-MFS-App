@@ -7,12 +7,13 @@
     <title>Payoo MFS App | Mobile banking</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body class="bg-slate-800">
+<body class="bg-slate-800 outfit-font">
     <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
         <header>
-            <nav class="flex justify-center items-center mt-6">
+            <nav class="flex justify-center items-center mt-6 border-b-2">
                 <div class="flex justify-center items-center mt-10 relative w-9/12 mb-10">
                     <img class="w-48 absolute" src="assets/circle.svg" alt="">
                     <img class="w-16 " src="assets/logo.svg" alt="">
@@ -23,16 +24,16 @@
         <div class="">
             <div class="hero-content flex-col lg:flex-row-reverse">
               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                <div class="card-body">
+                <form class="card-body">
                   <fieldset class="fieldset">
                     <label class="fieldset-label font-bold">Mobile Number</label>
-                    <input type="number" class="input" placeholder="Type Your Number" />
+                    <input id="account-number" value="01739460198" type="number" class="input" placeholder="Type Your Number" required/>
                     <label class="fieldset-label font-bold">Pin</label>
-                    <input type="password" class="input" placeholder="Type Your Pin" />
+                    <input id="pin" value="1234" type="text" class="input" placeholder="Type Your Pin" required/>
                     <div><a class="link link-hover font-bold">Forgot Pin?</a></div>
-                    <button id="login-btn" class="btn bg-linear-to-r from-cyan-500 to-blue-500 mt-4 text-white">Login</button>
+                    <button id="login-btn" class="btn bg-linear-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 mt-4 text-white">Login</button>
                   </fieldset>
-                </div>
+                </form>
               </div>
             </div>
           </div>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Payoo Banking</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="bg-slate-800 outfit-font">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+        <header class="bg-white">
+            <nav class="flex justify-around items-center border-b border-[#08080879] pb-5">
+                <div class="flex justify-between items-center">
+                    <img class="w-16" src="assets/logo.svg" alt="logo">
+                    <div>
+                        <h1 class="text-xl font-bold">$ 4500</h1>
+                        <p class="text-[#080808B3]">Available balance</p>
+                    </div>
+                </div>
+                <button class="border-2 border-[#0808083f] rounded-lg px-3 py-2 text-[#080808B3] cursor-pointer"><img
+                        class="inline" src="assets/logout.svg" alt="">
+                    logout</button>
+            </nav>
+        </header>
+        <section class="mt-10 px-4">
+            <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
+            <p class="text-[#080808B3]">Enjoy easy and convenient financial services with us. Cashout charge is low and
+            </p>
+            <!-- card container -->
+            <div class="cards grid grid-cols-3 mt-8 gap-4">
+                <!-- card  -->
+                <div class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl text-center cursor-pointer space-y-2">
+                    <img class="w-8 mx-auto" src="assets/icon/add-money.png" alt="add money">
+                    <h3 class="text-[#080808B3]">Add Money</h3>
+                </div>
+                <!-- card  -->
+                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
+                    <img class="w-8 mx-auto" src="assets/icon/cash-out.png" alt="add money">
+                    <h3 class="text-[#080808B3]">Cash Out</h3>
+                </div>
+                <!-- card  -->
+                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
+                    <img class="w-8 mx-auto" src="assets/icon/transfer-money.png" alt="add money">
+                    <h3 class="text-[#080808B3]">Transfer</h3>
+                </div>
+                <!-- card  -->
+                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
+                    <img class="w-8 mx-auto" src="assets/icon/get-bonus.png" alt="add money">
+                    <h3 class="text-[#080808B3]">Get Bonus</h3>
+                </div>
+                <!-- card  -->
+                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
+                    <img class="w-8 mx-auto" src="assets/icon/pay-bill.png" alt="add money">
+                    <h3 class="text-[#080808B3]">Pay Bill</h3>
+                </div>
+                <!-- card  -->
+                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
+                    <img class="w-8 mx-auto" src="assets/icon/transaction.png" alt="add money">
+                    <h3 class="text-[#080808B3]">Transactions</h3>
+                </div>
+            </div>
+
+        </section>
+        <!-- latest payment  -->
+        <section class="mt-10 px-4">
+            <div>
+                <h3 class="text-xl font-bold">Add Money</h3>
+                <!-- <h4>View All</h4> -->
+            </div>
+            <div class="">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                            <legend>Select Bank</legend>
+                            <select class="select">
+                                <option disabled selected>Select Bank</option>
+                                <option>Bkash</option>
+                                <option>Nagad</option>
+                                <option>Rocket</option>
+                                <option>Cellfin</option>
+                            </select>
+                            <fieldset class="fieldset">
+                                <label class="fieldset-label">Email</label>
+                                <input type="email" class="input" placeholder="Email" />
+                                <label class="fieldset-label">Password</label>
+                                <input type="password" class="input" placeholder="Password" />
+                                <div><a class="link link-hover">Forgot password?</a></div>
+                                <button id="login-btn"
+                                    class="btn bg-linear-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 mt-4 text-white">Login</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+</body>
+
+</html>
