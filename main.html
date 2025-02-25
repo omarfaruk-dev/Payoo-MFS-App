@@ -122,7 +122,6 @@
         <section id="cash-out-section" class="mt-10 px-4 pb-15">
             <div>
                 <h3 class="text-xl font-bold mb-2">Cash Out</h3>
-                <!-- <h4>View All</h4> -->
             </div>
             <!-- cash-out money form -->
             <div class="hero-content flex-col lg:flex-row-reverse">
@@ -133,15 +132,15 @@
                             <input id="agent-number" value="01521492170" type="number"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter 11 digit account number" required />
-                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Amount To Add</label>
-                            <input id="amount" type="number"
+                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Amount To Withdraw</label>
+                            <input id="cashout-amount" type="number"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter amount to withdraw" required />
                             <label class="fieldset-label text-base text-[#080808B3] font-semibold">Pin Number</label>
-                            <input id="pin" value="1234" type="number"
+                            <input id="cashout-pin" value="1234" type="number"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter 4 digit pin number" required />
-                            <button id="login-btn"
+                            <button id="cashout-btn"
                                 class="rounded-full btn bg-linear-to-r from-[#57DDE4] to-[#0451AE] hover:from-[#0451AE] hover:to-[#57DDE4] mt-4 text-white">Withdraw
                                 Money</button>
                         </fieldset>
@@ -162,15 +161,15 @@
                         <fieldset class="fieldset space-y-1">
                             <label class="fieldset-label text-base text-[#080808B3] font-semibold">User Account
                                 Number</label>
-                            <input id="agent-number" value="01521492170" type="number"
+                            <input id="transfer-number" value="01521492170" type="number"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter 11 digit account number" required />
                             <label class="fieldset-label text-base text-[#080808B3] font-semibold">Amount</label>
-                            <input id="amount" type="number"
+                            <input id="transfer-amount" type="number"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter amount to withdraw" required />
                             <label class="fieldset-label text-base text-[#080808B3] font-semibold">Pin Number</label>
-                            <input id="pin" value="1234" type="number"
+                            <input id="transfer-pin" value="1234" type="number"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter 4 digit pin number" required />
                             <button id="send-btn"
@@ -272,6 +271,8 @@
     </div>
     <script src="script/add-money.js"></script>
     <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
+    <script src="script/transfer-money.js"></script>
 </body>
 
 </html>
