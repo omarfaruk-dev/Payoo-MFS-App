@@ -11,87 +11,112 @@
 </head>
 
 <body class="bg-slate-800 outfit-font">
-    <div class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
-        <header class="bg-white">
-            <nav class="flex justify-around items-center border-b border-[#08080879] pb-5">
-                <div class="flex justify-between items-center">
-                    <img class="w-16" src="assets/logo.svg" alt="logo">
-                    <div>
-                        <h1 class="text-xl font-bold">$ <span id="main-balance">4500</span></h1>
-                        <p class="text-[#080808B3]">Available balance</p>
+    <div class="max-w-md min-h-screen mx-auto bg-gray-200">
+        <div class="bg-white py-6 rounded-b-2xl">
+            <header>
+                <nav class="flex justify-between items-center border-b border-[#0808083f] pb-5 px-4">
+                    <div class="flex justify-between items-center space-x-2">
+                        <img class="w-16" src="assets/logo.png" alt="logo">
+                        <div>
+                            <h1 class="text-xl font-bold">$ <span id="main-balance">4500</span></h1>
+                            <p class="text-[#080808B3]">Available balance</p>
+                        </div>
+                    </div>
+                    <button class="border-2 border-[#0808083f] rounded-lg px-3 py-2 text-[#080808B3] cursor-pointer hover:bg-gray-200"><img
+                            class="inline" src="assets/logout.svg" alt="">
+                        logout</button>
+                </nav>
+            </header>
+            <!-- welcome message and card -->
+            <section class="mt-10 px-4">
+                <h1 class="text-3xl font-bold mb-2">🔥Welcome to <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#57DDE4] to-[#0451AE]">Payooo!</span></h1>
+                <p class="text-[#080808B3]">Enjoy easy and convenient financial services with us. Cashout charge is low and
+                </p>
+                <!-- card container -->
+                <div class="cards grid grid-cols-3 mt-8 gap-4">
+                    <!-- card  -->
+                    <div class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
+                        <img class="w-8 mx-auto" src="assets/icon/add-money.png" alt="add money">
+                        <h3>Add Money</h3>
+                    </div>
+                    <!-- card  -->
+                    <div class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
+                        <img class="w-8 mx-auto" src="assets/icon/cash-out.png" alt="add money">
+                        <h3>Cash Out</h3>
+                    </div>
+                    <!-- card  -->
+                    <div class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
+                        <img class="w-8 mx-auto" src="assets/icon/transfer-money.png" alt="add money">
+                        <h3>Transfer</h3>
+                    </div>
+                    <!-- card  -->
+                    <div class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
+                        <img class="w-8 mx-auto" src="assets/icon/get-bonus.png" alt="add money">
+                        <h3>Get Bonus</h3>
+                    </div>
+                    <!-- card  -->
+                    <div class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
+                        <img class="w-8 mx-auto" src="assets/icon/pay-bill.png" alt="add money">
+                        <h3>Pay Bill</h3>
+                    </div>
+                    <!-- card  -->
+                    <div class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
+                        <img class="w-8 mx-auto" src="assets/icon/transaction.png" alt="add money">
+                        <h3>Tnx History</h3>
                     </div>
                 </div>
-                <button class="border-2 border-[#0808083f] rounded-lg px-3 py-2 text-[#080808B3] cursor-pointer"><img
-                        class="inline" src="assets/logout.svg" alt="">
-                    logout</button>
-            </nav>
-        </header>
-        <section class="mt-10 px-4">
-            <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
-            <p class="text-[#080808B3]">Enjoy easy and convenient financial services with us. Cashout charge is low and
-            </p>
-            <!-- card container -->
-            <div class="cards grid grid-cols-3 mt-8 gap-4">
-                <!-- card  -->
-                <div class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl text-center cursor-pointer space-y-2">
-                    <img class="w-8 mx-auto" src="assets/icon/add-money.png" alt="add money">
-                    <h3 class="text-[#080808B3]">Add Money</h3>
-                </div>
-                <!-- card  -->
-                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
-                    <img class="w-8 mx-auto" src="assets/icon/cash-out.png" alt="add money">
-                    <h3 class="text-[#080808B3]">Cash Out</h3>
-                </div>
-                <!-- card  -->
-                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
-                    <img class="w-8 mx-auto" src="assets/icon/transfer-money.png" alt="add money">
-                    <h3 class="text-[#080808B3]">Transfer</h3>
-                </div>
-                <!-- card  -->
-                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
-                    <img class="w-8 mx-auto" src="assets/icon/get-bonus.png" alt="add money">
-                    <h3 class="text-[#080808B3]">Get Bonus</h3>
-                </div>
-                <!-- card  -->
-                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
-                    <img class="w-8 mx-auto" src="assets/icon/pay-bill.png" alt="add money">
-                    <h3 class="text-[#080808B3]">Pay Bill</h3>
-                </div>
-                <!-- card  -->
-                <div class="box border-2 border-[#0808083f] p-5 rounded-xl text-center cursor-pointer space-y-2">
-                    <img class="w-8 mx-auto" src="assets/icon/transaction.png" alt="add money">
-                    <h3 class="text-[#080808B3]">Transactions</h3>
-                </div>
-            </div>
-
-        </section>
-        <!-- latest payment  -->
-        <section class="mt-10 px-4">
+    
+            </section>
+        </div>
+        <!-- Add Money section -->
+        <section class="mt-10 px-4 pb-15 hidden">
             <div>
-                <h3 class="text-xl font-bold">Add Money</h3>
+                <h3 class="text-xl font-bold mb-2">Add Money</h3>
                 <!-- <h4>View All</h4> -->
             </div>
-            <div class="">
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                        <div class="card-body">
-                            <legend>Select Bank</legend>
-                            <select class="select">
-                                <option disabled selected>Select Bank</option>
-                                <option value="Bkash">Bkash</option>
-                                <option value="Nagad">Nagad</option>
-                                <option value="Rocket">Rocket</option>
-                            </select>
-                            <fieldset class="fieldset">
-                                <label class="fieldset-label font-bold">Mobile Number</label>
-                                <input id="account-number" value="01739460198" type="number" class="input" placeholder="Type Your Number" required/>
-                                <label class="fieldset-label font-bold">Amount</label>
-                                <input id="amount" type="text" class="input" placeholder="Type Your Amount" required/>
-                                <label class="fieldset-label font-bold">Pin</label>
-                                <input id="pin" value="1234" type="text" class="input" placeholder="Type Your Pin" required/>
-                                <button id="add-money" class="btn bg-linear-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 mt-4 text-white">Add Money</button>
-                              </fieldset>
-                        </div>
+            <!-- add money form -->
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card bg-base-100 w-full max-w-sm rounded-3xl shrink-0 shadow-2xl">
+                    <div class="card-body">
+                        <legend class="text-base font-semibold text-[#080808B3]">Select A Bank</legend>
+                        <select class="select font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none">
+                            <option disabled selected>Select Bank</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="Rocket">Rocket</option>
+                        </select>
+                        <fieldset class="fieldset space-y-1">
+                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Bank Account Number</label>
+                            <input id="account-number" value="01739460198" type="number" class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none" placeholder="Enter 11 digit account number" required/>
+                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Amount To Add</label>
+                            <input id="amount" type="text" class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none" placeholder="Add amount to add" required/>
+                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Pin Number</label>
+                            <input id="pin" value="1234" type="text" class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none" placeholder="Enter 4 digit pin number" required/>
+                            <button id="login-btn" class="rounded-full btn bg-linear-to-r from-[#57DDE4] to-[#0451AE] hover:from-[#0451AE] hover:to-[#57DDE4] mt-4 text-white">Login</button>
+                          </fieldset>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Cash-out Money Section-->
+        <section class="mt-10 px-4 pb-15">
+            <div>
+                <h3 class="text-xl font-bold mb-2">Cash Out</h3>
+                <!-- <h4>View All</h4> -->
+            </div>
+            <!-- cash-out money form -->
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card bg-base-100 w-full max-w-sm rounded-3xl shrink-0 shadow-2xl">
+                    <div class="card-body">
+                        <fieldset class="fieldset space-y-1">
+                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Agent Number</label>
+                            <input id="agent-number" value="01521492170" type="number" class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none" placeholder="Enter 11 digit account number" required/>
+                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Amount To Add</label>
+                            <input id="amount" type="number" class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none" placeholder="Enter amount to withdraw" required/>
+                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Pin Number</label>
+                            <input id="pin" value="1234" type="number" class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none" placeholder="Enter 4 digit pin number" required/>
+                            <button id="login-btn" class="rounded-full btn bg-linear-to-r from-[#57DDE4] to-[#0451AE] hover:from-[#0451AE] hover:to-[#57DDE4] mt-4 text-white">Login</button>
+                          </fieldset>
                     </div>
                 </div>
             </div>

@@ -11,33 +11,33 @@
 </head>
 
 <body class="bg-slate-800 outfit-font">
-    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+    <div class="max-w-md min-h-screen mx-auto pt-6 bg-gray-200">
         <header>
             <nav class="flex justify-center items-center mt-6 ">
                 <div class="flex justify-center items-center mt-10 relative w-9/12 mb-10">
-                    <img class="w-48 absolute" src="assets/circle.svg" alt="">
-                    <img class="w-16 " src="assets/logo.svg" alt="">
+                  <img class="w-3/6 -mb-10" src="assets/logo.png" alt="payoo logo">
+                    <!-- <img class="w-48 absolute" src="assets/circle.svg" alt="">
+                    <img class="w-16 " src="assets/logo.svg" alt=""> -->
                 </div>
             </nav>
         </header>
         <!-- login section -->
         <div class="">
             <div class="hero-content flex-col lg:flex-row-reverse">
-              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-2xl">
                 <form class="card-body">
                   <fieldset class="fieldset">
-                    <label class="fieldset-label font-bold">Mobile Number</label>
-                    <input id="account-number" value="01739460198" type="number" class="input" placeholder="Type Your Number" required/>
-                    <label class="fieldset-label font-bold">Pin</label>
-                    <input id="pin" value="1234" type="text" class="input" placeholder="Type Your Pin" required/>
-                    <div><a class="link link-hover font-bold">Forgot Pin?</a></div>
-                    <button id="login-btn" class="btn bg-linear-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 mt-4 text-white">Login</button>
+                    <label class="fieldset-label text-base font-bold">Mobile Number</label>
+                    <input id="account-number" value="01739460198" type="number" class="input font-semibold rounded-full bg-gray-200 border-2 focus:border-2 focus:border-[#0451AE] focus:outline-none" placeholder="Enter Your Number" required/>
+                    <label class="fieldset-label text-base font-bold">Pin</label>
+                    <input id="pin" value="1234" type="text" class="input font-semibold rounded-full bg-gray-200 border-2 focus:border-2 focus:border-[#0451AE] focus:outline-none" placeholder="Enter 4 Digit Pin" required/>
+                    <button id="login-btn" class="rounded-full btn bg-linear-to-r from-[#57DDE4] to-[#0451AE] hover:from-[#0451AE] hover:to-[#57DDE4] mt-4 text-white">Login</button>
                   </fieldset>
                 </form>
               </div>
             </div>
           </div>
-    </section>
+    </div>
 
     <script src="script/login.js"></script>
     
