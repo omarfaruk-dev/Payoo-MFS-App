@@ -22,7 +22,7 @@
                             <p class="text-[#080808B3]">Available balance</p>
                         </div>
                     </div>
-                    <button
+                    <button id="log-out"
                         class="border-2 border-[#0808083f] rounded-lg px-3 py-2 text-[#080808B3] cursor-pointer hover:bg-gray-200"><img
                             class="inline" src="assets/logout.svg" alt="">
                         logout</button>
@@ -38,48 +38,48 @@
                 </p>
                 <!-- card container -->
                 <div class="cards grid grid-cols-3 mt-8 gap-4">
-                    <!-- card  -->
-                    <div
+                    <!-- card add money  -->
+                    <div id="add-money-card"
                         class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
                         <img class="w-8 mx-auto" src="assets/icon/add-money.png" alt="add money">
                         <h3>Add Money</h3>
                     </div>
-                    <!-- card  -->
-                    <div
+                    <!-- card cash out  -->
+                    <div id="cash-out-card"
                         class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
                         <img class="w-8 mx-auto" src="assets/icon/cash-out.png" alt="add money">
                         <h3>Cash Out</h3>
                     </div>
-                    <!-- card  -->
-                    <div
+                    <!-- card transfer money  -->
+                    <div id="transfer-money-card"
                         class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
                         <img class="w-8 mx-auto" src="assets/icon/transfer-money.png" alt="add money">
                         <h3>Transfer</h3>
                     </div>
-                    <!-- card  -->
-                    <div
+                    <!-- card get bonus -->
+                    <div id="get-bonus-card"
                         class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
                         <img class="w-8 mx-auto" src="assets/icon/get-bonus.png" alt="add money">
                         <h3>Get Bonus</h3>
                     </div>
-                    <!-- card  -->
-                    <div
+                    <!-- card pay bill -->
+                    <div id="pay-bill-card"
                         class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
                         <img class="w-8 mx-auto" src="assets/icon/pay-bill.png" alt="add money">
                         <h3>Pay Bill</h3>
                     </div>
-                    <!-- card  -->
-                    <div
+                    <!-- card txn history -->
+                    <div id="txn-history-card"
                         class="box border-2 border-[#0808083f] px-5 py-4 rounded-xl font-semibold text-[#080808B3] hover:text-[#0451AE] text-center cursor-pointer space-y-2 hover:bg-[#0450ae1a] hover:border-[#0451AE]">
-                        <img class="w-8 mx-auto" src="assets/icon/transaction.png" alt="add money">
-                        <h3>Tnx History</h3>
+                        <img class="w-8 mx-auto" src="assets/icon/transaction.png" alt="transaction">
+                        <h3>Txn History</h3>
                     </div>
                 </div>
 
             </section>
         </div>
         <!-- Add Money section -->
-        <section class="mt-10 px-4 pb-15 hidden">
+        <section id="add-money-section" class="mt-10 px-4 pb-15">
             <div>
                 <h3 class="text-xl font-bold mb-2">Add Money</h3>
                 <!-- <h4>View All</h4> -->
@@ -89,7 +89,7 @@
                 <div class="card bg-base-100 w-full max-w-sm rounded-3xl shrink-0 shadow-2xl">
                     <div class="card-body">
                         <legend class="text-base font-semibold text-[#080808B3]">Select A Bank</legend>
-                        <select
+                        <select id="select-bank"
                             class="select font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none">
                             <option disabled selected>Select Bank</option>
                             <option value="Bkash">Bkash</option>
@@ -110,7 +110,7 @@
                             <input id="pin" value="1234" type="text"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter 4 digit pin number" required />
-                            <button id="login-btn"
+                            <button id="add-money"
                                 class="rounded-full btn bg-linear-to-r from-[#57DDE4] to-[#0451AE] hover:from-[#0451AE] hover:to-[#57DDE4] mt-4 text-white">Add
                                 Money</button>
                         </fieldset>
@@ -119,7 +119,7 @@
             </div>
         </section>
         <!-- Cash-out Money Section-->
-        <section class="mt-10 px-4 pb-15 hidden">
+        <section id="cash-out-section" class="mt-10 px-4 pb-15">
             <div>
                 <h3 class="text-xl font-bold mb-2">Cash Out</h3>
                 <!-- <h4>View All</h4> -->
@@ -150,7 +150,7 @@
             </div>
         </section>
         <!-- Transfer Money Section-->
-        <section class="mt-10 px-4 pb-15 hidden">
+        <section id="transfer-money-section" class="mt-10 px-4 pb-15">
             <div>
                 <h3 class="text-xl font-bold mb-2">Transfer Money</h3>
                 <!-- <h4>View All</h4> -->
@@ -182,7 +182,7 @@
             </div>
         </section>
         <!-- Get bonus Section-->
-        <section class="mt-10 px-4 pb-15 hidden">
+        <section id="get-bonus-section" class="mt-10 px-4 pb-15">
             <div>
                 <h3 class="text-xl font-bold mb-2">Get Bonus</h3>
                 <!-- <h4>View All</h4> -->
@@ -206,7 +206,7 @@
             </div>
         </section>
         <!-- Pay Bill Section-->
-        <section class="mt-10 px-4 pb-15">
+        <section id="pay-bill-section" class="mt-10 px-4 pb-15">
             <div>
                 <h3 class="text-xl font-bold mb-2">Pay Bill</h3>
             </div>
@@ -245,7 +245,7 @@
             </div>
         </section>
         <!-- Transaction History Section-->
-        <section class="mt-10 px-4 pb-15">
+        <section id="txn-history-section" class="mt-10 px-4 pb-15">
             <div class="flex justify-between">
                 <h3 class="text-xl font-bold mb-2">Transaction History</h3>
                 <h3 class="text-base mb-2">View all</h3>
@@ -269,10 +269,9 @@
                 </div>
             </div>
         </section>
-
     </div>
-
     <script src="script/add-money.js"></script>
+    <script src="script/toggle.js"></script>
 </body>
 
 </html>
