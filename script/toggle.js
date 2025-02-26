@@ -6,6 +6,8 @@ document.getElementById('logo').addEventListener('click', function(){
     handleToggle('get-bonus-section', 'none')
     handleToggle('pay-bill-section', 'none')
     handleToggle('txn-history-section', 'block')
+
+    document.getElementById('txn-history-title').innerHTML = 'Recent Transaction';
     
 })
 

@@ -5,7 +5,7 @@ document.getElementById('login-btn').addEventListener('click', function(event){
     const pin = document.getElementById('pin').value;
     const convertedPin = parseInt(pin);
 
-    if(accountNumber.length ===11){
+    if(accountNumber.length ===11 && accountNumber.startsWith('01')){
         if(convertedPin ===1234){
             window.location.href="./main.html"
         }
@@ -14,7 +14,7 @@ document.getElementById('login-btn').addEventListener('click', function(event){
         }
     }
     else{
-        alert('Invalid Account');
+        alert('Invalid Account Number! Please, check again');
     }
 
 })
