@@ -16,7 +16,7 @@
             <header>
                 <nav class="flex justify-between items-center border-b border-[#0808083f] pb-5 px-4">
                     <div class="flex justify-between items-center space-x-2">
-                        <img class="w-16" src="assets/logo.png" alt="logo">
+                        <img id="logo" class="w-16" src="assets/logo.png" alt="logo">
                         <div>
                             <h1 class="text-xl font-bold">$ <span id="main-balance">4500</span></h1>
                             <p class="text-[#080808B3]">Available balance</p>
@@ -132,7 +132,8 @@
                             <input id="agent-number" value="01521492170" type="number"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter 11 digit account number" required />
-                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Amount To Withdraw</label>
+                            <label class="fieldset-label text-base text-[#080808B3] font-semibold">Amount To
+                                Withdraw</label>
                             <input id="cashout-amount" type="number"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter amount to withdraw" required />
@@ -214,28 +215,28 @@
                 <div class="card bg-base-100 w-full max-w-sm rounded-3xl shrink-0 shadow-2xl">
                     <div class="card-body">
                         <legend class="text-base font-semibold text-[#080808B3]">Select To Pay</legend>
-                        <select
+                        <select id="selected-bank"
                             class="select font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none">
                             <option disabled selected>Select Payer</option>
                             <option value="Electricity">Electricity Bill</option>
                             <option value="Internet">Internet Bill</option>
-                            <option value="Gass">Gass Bill</option>
+                            <option value="Gas">Gass Bill</option>
                         </select>
                         <fieldset class="fieldset space-y-1">
                             <label class="fieldset-label text-base text-[#080808B3] font-semibold">Biller Account
                                 Number</label>
-                            <input id="account-number" value="01701501700" type="number"
+                            <input id="bill-account-number" value="01701501700" type="number"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter 11 digit account number" required />
                             <label class="fieldset-label text-base text-[#080808B3] font-semibold">Amount To Pay</label>
-                            <input id="amount" type="text"
+                            <input id="bill-amount" type="text"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Add amount to pay" required />
                             <label class="fieldset-label text-base text-[#080808B3] font-semibold">Pin Number</label>
-                            <input id="pin" value="1234" type="text"
+                            <input id="bill-pin" value="1234" type="text"
                                 class="input font-semibold rounded-full bg-gray-200 border focus:border focus:border-[#0451AE] focus:outline-none"
                                 placeholder="Enter 4 digit pin number" required />
-                            <button id="login-btn"
+                            <button id="pay-bill-btn"
                                 class="rounded-full btn bg-linear-to-r from-[#57DDE4] to-[#0451AE] hover:from-[#0451AE] hover:to-[#57DDE4] mt-4 text-white">Pay
                                 Now</button>
                         </fieldset>
@@ -245,24 +246,98 @@
         </section>
         <!-- Transaction History Section-->
         <section id="txn-history-section" class="mt-10 px-4 pb-15">
-            <div class="flex justify-between">
+            <div class="flex justify-between mb-4">
                 <h3 class="text-xl font-bold mb-2">Transaction History</h3>
                 <h3 class="text-base mb-2">View all</h3>
-
             </div>
-            <!-- Transaction history form -->
-            <div class="hero-content flex-col">
-                <div class="card bg-base-100 w-full max-w-sm rounded-xl shadow-2xl">
-                    <div class="card-body">
-                        <div class="flex justify-between">
+            <!-- Transaction history card -->
+            <div id="txn-container" class="space-y-4">
+                <div class="w-11/12 mx-auto">
+                    <div class="bg-[#FFB02E] w-full max-w-sm rounded-xl shadow-md p-3">
+                        <!-- card content -->
+                        <div class="flex justify-between items-center">
                             <div class="flex gap-x-3 justify-center items-center">
-                                <div class="bg-gray-200 rounded-full h-10 w-10 flex items-center justify-center"><img src="assets/icon/add-money.png" alt="add money"></div>
-                                <div>
-                                    <h3 class="text-base font-bold text-[#080808B3]">Electricity Bill</h3>
-                                    <p class="text-sm">Today 01:44 AM</p>
+                                <div class="bg-gray-200 rounded-full h-10 w-10 flex items-center justify-center">
+                                    <img src="assets/icon/pay-bill.png" alt="add money">
+                                </div>
+                                <div class="space-y-1">
+                                    <h3 class="text-sm font-bold text-[#080808B3]">Pay Bill</h3>
+                                    <h3 class="text-base font-semibold text-[#080808B3]">Electricity Bill</h3>
+                                    <p class="text-sm">TrxID: DB05428745</p>
                                 </div>
                             </div>
-                            <div class="three-dot"></div>
+                            <div class="text-right space-y-1">
+                                <div class="font-bold"><h3>-$100</h3></div>
+                                <p class="text-sm font-medium">02:45pm 26/02/2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-11/12 mx-auto">
+                    <div class="bg-[#17CB71] w-full max-w-sm rounded-xl shadow-md p-3">
+                        <!-- card content -->
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-x-3 justify-center items-center">
+                                <div class="bg-gray-200 rounded-full h-10 w-10 flex items-center justify-center">
+                                    <img src="assets/icon/add-money.png" alt="add money">
+                                </div>
+                                <div class="space-y-1">
+                                    <h3 class="text-sm font-bold text-[#080808B3]">Add Money</h3>
+                                    <h3 class="text-base font-semibold text-[#080808B3]">01701301901</h3>
+                                    <p class="text-sm">TrxID: CB01587452</p>
+                                </div>
+                            </div>
+                            <div class="text-right space-y-1">
+                                <div class="font-bold"><h3>+$100</h3></div>
+                                <p class="text-sm font-medium">02:45pm 26/02/2025</p>
+                                <!-- <div class="three-dot text-right"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cash out history-->
+                <div class="w-11/12 mx-auto">
+                    <div class="bg-[#FFB02E] w-full max-w-sm rounded-xl shadow-md p-3">
+                        <!-- Cash out content -->
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-x-3 justify-center items-center">
+                                <div class="bg-gray-200 rounded-full h-10 w-10 flex items-center justify-center">
+                                    <img src="assets/icon/cash-out.png" alt="add money">
+                                </div>
+                                <div class="space-y-1">
+                                    <h3 class="text-sm font-bold text-[#080808B3]">Cash Out</h3>
+                                    <h3 class="text-base font-semibold text-[#080808B3]">01701901355</h3>
+                                    <p class="text-sm">TrxID: DB05428745</p>
+                                </div>
+                            </div>
+                            <div class="text-right space-y-1">
+                                <div class="font-bold"><h3>-$250</h3></div>
+                                <p class="text-sm font-medium">02:45pm 26/02/2025</p>
+                                <!-- <div class="three-dot text-right"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- get bonus history -->
+                <div class="w-11/12 mx-auto">
+                    <div class="bg-[#0450ae9c] w-full max-w-sm rounded-xl shadow-md p-3">
+                        <!-- card content -->
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-x-3 justify-center items-center">
+                                <div class="bg-gray-200 rounded-full h-10 w-10 flex items-center justify-center">
+                                    <img src="assets/icon/get-bonus.png" alt="add money">
+                                </div>
+                                <div class="space-y-1">
+                                    <h3 class="text-sm font-bold text-[#080808B3]">Get Bonus</h3>
+                                    <h3 class="text-base font-semibold text-[#080808B3]">01701301901</h3>
+                                    <p class="text-sm">TrxID: CB01587452</p>
+                                </div>
+                            </div>
+                            <div class="text-right space-y-1">
+                                <div class="font-bold"><h3>+$100</h3></div>
+                                <p class="text-sm font-medium">02:45pm 26/02/2025</p>
+                                <!-- <div class="three-dot text-right"></div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -274,6 +349,9 @@
     <script src="script/cashout.js"></script>
     <script src="script/transfer-money.js"></script>
     <script src="script/get-bonus.js"></script>
+    <script src="script/txn-history.js"></script>
+    <script src="script/pay-bill.js"></script>
+    <script src="utilities/utilities.js"></script>
 </body>
 
 </html>
